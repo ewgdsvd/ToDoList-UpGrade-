@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List > Входящие</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="burger-menu">
+        <div class="burger-icon" id="burger-icon">
+            &#9776;
+        </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <br><br><br>
+        <h1>To Do List</h1>
+        <button id="add-task-btn" class="add-task-btn">Добавить задачу</button>
+        <input type="search" class="add-task-btn" placeholder="Поиск🔍" style="width: 250px">
+        <ul class="menu">
+            <br>
+            <a href="index.html" class="active2">Мои задачи</a>
+            <br><br><br>
+            <a href="#" class="active2" style="padding: 10px 85px;">Входящие</a>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Входящие</h2>
+        <div id="empty-state" class="empty-state hidden">
+            <br><br><br><br><br>
+            <p>Упс у вас нет задач</p>
+            <button id="empty-add-task-btn" class="add-task-btn" style="font-size: 30px; background-color: #ff6b6b; border-radius: 20px"><b>+</b></button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+        <div class="bg-fon"></div>
+    </div>
+    <div id="task-modal" class="modal hidden">
+        <div class="modal-content">
+           <input type="text" id="task-title-input" style="border: none; width: 65%; padding: 10px; font-size: 20px" placeholder="Название задачи">
+            <br>
+            <textarea class="taskInput" id="task-desc-input" placeholder="Описание" rows="4" style="width: 95%; border: none; padding: 10px; font-size: 16px; height: 14%; resize: none;"></textarea>
+            <div class="modal-options">
+                <input type="date" style="border-radius: 10px; margin-left: 10px">
+                <input type="text" id="deadline-input" class="hidden">
+                <div class="priority-selector">
+                    <button id="priorityBtn" class="priority-button" style="border-radius: 10px;">Приоритет</button>
+                    <div id="priorityDropdown" class="dropdown-content">
+                        <div class="priority-option" data-priority="1">
+                            <span class="flag red"></span> Приоритет 1
+                        </div>
+                        <div class="priority-option" data-priority="2">
+                            <span class="flag orange"></span> Приоритет 2
+                        </div>
+                        <div class="priority-option" data-priority="3">
+                            <span class="flag blue"></span> Приоритет 3
+                        </div>
+                        <div class="priority-option" data-priority="4">
+                            <span class="flag white"></span> Приоритет 4
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <span><br><br></span><br><br><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span><span><br><br></span>
+                <button id="cancel-btn" class="cancel-btn" style="border-radius: 10px;">Отмена</button>
+                <button id="save-task-btn" class="add-task-modal-btn" style="border-radius: 10px;">Добавить задачу</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
